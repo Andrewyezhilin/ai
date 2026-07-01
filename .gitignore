@@ -1,0 +1,8 @@
+# Dataset must NOT be submitted (per lab specification)
+Chinese_MNIST_Dataset/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
