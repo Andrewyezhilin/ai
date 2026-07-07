@@ -2,7 +2,10 @@
 
 ## Project
 
-This repository contains `COMP9517_Lab3.ipynb` — a Jupyter notebook for COMP9517 Lab 3 that trains and compares **KNN**, **Decision Tree**, and **SGD** classifiers on the **Chinese MNIST** dataset (15,000 grayscale 64×64 images, 15 classes).
+This repository contains Jupyter notebooks for COMP9517 labs:
+
+- `COMP9517_Lab3.ipynb` — Lab 3: **KNN**, **Decision Tree**, and **SGD** on **Chinese MNIST** (15,000 grayscale 64×64 images, 15 classes).
+- `COMP9517_Lab4.ipynb` — Lab 4: **Otsu** thresholding and **morphological** segmentation on **Fruits**, **Pineapples**, and **Monsters** images.
 
 ## Cursor Cloud specific instructions
 
@@ -44,4 +47,32 @@ python3 -m jupyter nbconvert --to notebook --execute --inplace \
   COMP9517_Lab3.ipynb
 ```
 
-Full execution takes ~1.5–2 minutes; the SGD classifier is the slowest step (roughly a minute at 10,000 training images). There is no separate build/lint/test setup for this repo.
+Full execution takes ~1.5–2 minutes; the SGD classifier is the slowest step (roughly a minute at 10,000 training images).
+
+### Lab 4 images (NOT in the repo — must be downloaded)
+Per the lab spec, images are available on **WebCMS3** and are git-ignored. Place them in:
+
+```
+COMP9517_26T2_Lab4_Images/
+├── Fruits.jpg       # extension may be .png / .bmp / .tif
+├── Pineapples.jpg
+└── Monsters.jpg
+```
+
+The notebook resolves filenames automatically (`Fruits`, `Pineapples`, `Monsters` + common extensions). You can also set an absolute `IMAGE_DIR` in the notebook (e.g. `C:\Users\...\COMP9517_26T2_Lab4_Images`).
+
+Expected object counts (from the lab specification): Fruits **n = 19**, Pineapples **n = 15**, Monsters **n = 18**. Tune values in `IMAGE_PARAMS` if your counts differ slightly.
+
+### Run / execute Lab 4 notebook
+
+```bash
+python3 -m jupyter notebook COMP9517_Lab4.ipynb
+```
+
+```bash
+python3 -m jupyter nbconvert --to notebook --execute --inplace \
+  --ExecutePreprocessor.timeout=600 --ExecutePreprocessor.kernel_name=python3 \
+  COMP9517_Lab4.ipynb
+```
+
+Execution is fast (seconds per image) once the three images are present. There is no separate build/lint/test setup for this repo.
