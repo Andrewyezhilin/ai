@@ -1,5 +1,7 @@
-# Dataset must NOT be submitted (per lab specification)
+# Datasets must NOT be submitted (per lab specification)
 Chinese_MNIST_Dataset/
+COMP9517_26T2_Lab4_Images/*
+!COMP9517_26T2_Lab4_Images/README.md
 
 # Python
 .venv/

@@ -1,4 +1,4 @@
-# Python dependencies for the COMP9517 Lab 3 notebook (COMP9517_Lab3.ipynb)
+# Python dependencies for COMP9517 Lab notebooks (COMP9517_Lab3.ipynb, COMP9517_Lab4.ipynb)
 # Install with:  python3 -m pip install -r requirements.txt
 numpy
 pandas
